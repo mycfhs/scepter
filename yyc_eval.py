@@ -64,11 +64,11 @@ data = LargenUI.data_preprocess_inpaint(
 
 
 # init file system - modelscope
-# FS.TEMP_DIRinit_fs_client(Config(load=False, cfg_dict={'NAME': 'ModelscopeFs', 'TEMP_DIR': 'cache/data'}))
-FS.TEMP_DIRinit_fs_client(
+# FS.init_fs_client(Config(load=False, cfg_dict={'NAME': 'ModelscopeFs', 'TEMP_DIR': 'cache/data'}))
+FS.init_fs_client(
     Config(load=False, cfg_dict={"NAME": "ModelscopeFs", "TEMP_DIR": "cache/cache_data"})
 )   # 新版本改名字了hhh。 ui里面保存到cache data。我们就用之前下载好的，不然得重新下载。 这个在scepter_ui.yaml里面
-FS.TEMP_DIRinit_fs_client(
+FS.init_fs_client(
     Config(load=False, cfg_dict={"NAME": "HttpFs", "TEMP_DIR": "cache/cache_data"})
 )   # load参数不知道需不需要单独设置
 

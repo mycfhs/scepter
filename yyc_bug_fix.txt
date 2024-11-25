@@ -3,7 +3,7 @@ pip install open-clip-torch==2.24.0
 
 # 创环境用3.8的python会报错  新版本代码有变量标注 挨个删掉就行 不多
 
-# 那个TEMP_DIRinit_fs_client我也忘了为啥了,还是先用着init_fs_client,后面有问题再改回TEMP_DIRinit_fs_client我也忘了为啥了
+# 那个init_fs_client我也忘了为啥了,还是先用着init_fs_client,后面有问题再改回init_fs_client我也忘了为啥了
 
 # 修改使用显卡:
 # 去scepter.scepter.modules.utils.distribute.__init__ 里面修改device_id  line618

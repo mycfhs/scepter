@@ -28,11 +28,11 @@ all_bg = [png[:-6] for png in os.listdir(tar_path) if png.endswith("_1.png")]
 category_list = [i for i in os.listdir(ref_path) if i in category_dict.keys()]
 
 # init file system - modelscope
-# FS.TEMP_DIRinit_fs_client(Config(load=False, cfg_dict={'NAME': 'ModelscopeFs', 'TEMP_DIR': 'cache/data'}))
-FS.TEMP_DIRinit_fs_client(
+# FS.init_fs_client(Config(load=False, cfg_dict={'NAME': 'ModelscopeFs', 'TEMP_DIR': 'cache/data'}))
+FS.init_fs_client(
     Config(load=False, cfg_dict={"NAME": "ModelscopeFs", "TEMP_DIR": "cache/cache_data"})
 )  # 新版本改名字了hhh。 ui里面保存到cache data。我们就用之前下载好的，不然得重新下载。 这个在scepter_ui.yaml里面
-FS.TEMP_DIRinit_fs_client(
+FS.init_fs_client(
     Config(load=False, cfg_dict={"NAME": "HttpFs", "TEMP_DIR": "cache/cache_data"})
 ) 
 
